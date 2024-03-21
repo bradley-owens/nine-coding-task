@@ -14,16 +14,18 @@ const ButtonTwo: React.FC<ButtonProps> = ({
   return (
     <a
       href={href}
-      className="cursor-pointer mb:w-[240px] max-w-[219px] py-4 px-4 group relative overflow-hidden bg-white text-lg shadow block sm:ml-0 mx-auto"
+      className={`cursor-pointer sm:w-[267px] w-[240px] rounded-full h-[65px] py-4 px-4 group relative overflow-hidden ${bgColor}  text-lg shadow mx-auto flex items-center justify-center`}
       role="button"
       target="_blank"
       rel="sponsored noopener noreferrer"
     >
       <div
-        className={`absolute inset-0 w-3 ${bgColor} transition-all duration-[250ms] ease-out ${textColor} group-hover:w-full`}
+        className={`absolute inset-0 w-0  transition-all bg-white duration-[250ms] ease-out ${textColor} group-hover:w-full`}
       ></div>
-      <span className="font-bold text-center relative text-forest group-hover:text-white mx-auto block">
-        <h3 className="inline text-24 uppercase text-center">{text}</h3>
+      <span className="text-center relative text-white group-hover:text-black mx-auto block">
+        <h3 className="inline sm:text-clampHeading4 uppercase gotham-bold pb-0">
+          {text}
+        </h3>
       </span>
     </a>
   );
