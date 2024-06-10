@@ -1,4 +1,5 @@
-import { ImageProps, CustomLinkProps, ButtonProps } from '../../types'
+import { motion } from 'framer-motion'
+import { ImageProps, CustomLinkProps, ButtonProps, MotionImageProps } from '../../types'
 
 export const Image: React.FC<ImageProps> = (props) => {
   return <img {...props} />
@@ -14,6 +15,8 @@ export const CustomLink = ({ href, className = '', children }: CustomLinkProps) 
     </>
   )
 }
+
+export const MotionImage: React.FC<MotionImageProps> = (props) => <motion.img {...props} />
 
 export const Button: React.FC<ButtonProps> = ({
   href,

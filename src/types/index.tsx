@@ -26,3 +26,14 @@ export type ButtonProps = {
   bgColor?: string
   textColor?: string
 }
+
+export type MotionImageProps = {
+  src: string
+  alt: string
+  'data-sccroll'?: boolean
+  'data-scroll-speed'?: string
+  initial?: { opacity: number }
+  whileInView?: { opacity: number }
+  transition?: { duration: number; delay: number; ease: string }
+  className?: string
+}
