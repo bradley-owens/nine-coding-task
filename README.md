@@ -4,7 +4,7 @@ This is a boilerplate project for building immersive web applications using Reac
 
 ## Instructions
 
-1. Checkout a new branch called your name e.g.
+1. Checkout a new branch called your name
 2. Build a responsive website according to the [XD](https://drive.google.com/drive/folders/1Uy0AT5Hzfzz8KigB2QJlbpDbZU6agl7B?usp=sharing) that works across mobile and web
 3. Gallery component can be built native or use library
 4. Add animations and parallax if time permits
