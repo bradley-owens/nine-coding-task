@@ -78,7 +78,8 @@ const Story = ({
     const breakIndex = text.indexOf(textBreak.breakAt);
     if (breakIndex !== -1) {
       textParts = [
-        text.substring(0, breakIndex + textBreak.breakAt.length),
+        text.substring(0, breakIndex),
+        textBreak.breakAt,
         text.substring(breakIndex + textBreak.breakAt.length),
       ];
     }
@@ -96,6 +97,18 @@ const Story = ({
       : image.backgroundHigh
       ? "img-background"
       : "img-background_low";
+
+  const formattedText = text.split("/n").map((part, index) => (
+    <React.Fragment key={index}>
+      {part}
+      {index < text.split("/n").length - 1 && (
+        <>
+          <br />
+          <br />
+        </>
+      )}
+    </React.Fragment>
+  ));
 
   return (
     <section
@@ -125,43 +138,59 @@ const Story = ({
           )}
         </>
       )}
-
-      <p>
-        {textParts.map((part, index) => (
-          <React.Fragment key={index}>
-            {part}
-            {textBreak.shouldBreak && index === 0 && (
-              <>
-                {isMobile && (
-                  <div
-                    className={imgContainerClass}
-                    style={{ margin: "1.5rem 0" }}
-                  >
-                    {carousel.hasCarousel ? (
-                      <Carousel
-                        isMediaSkinny={isMediaSkinny}
-                        slides={carousel.slides}
-                      />
-                    ) : (
-                      <img
-                        className="story-img"
-                        src={image.imgSrc}
-                        alt={image.imgAlt}
-                      />
-                    )}
-                    {!isMobile && image.hasImgBackground && (
-                      <div
-                        className={backgroundClass}
-                        style={{ backgroundColor: image.backgroundColor }}
-                      ></div>
-                    )}
-                  </div>
-                )}
-              </>
-            )}
-          </React.Fragment>
-        ))}
-      </p>
+      {!textBreak.shouldBreak && textBreak.breakAt === "" && (
+        <p>{formattedText}</p>
+      )}
+      {!textBreak.shouldBreak && textBreak.breakAt.length > 1 && (
+        <p>{formattedText}</p>
+      )}
+      {textBreak.shouldBreak && textBreak.breakAt.length > 1 && (
+        <p>
+          {textParts.map((part, index) => (
+            <React.Fragment key={index}>
+              {part === textBreak.breakAt ? (
+                !isMobile ? (
+                  <>
+                    <br />
+                    <br />
+                  </>
+                ) : null
+              ) : (
+                part
+              )}
+              {textBreak.shouldBreak && index === 0 && (
+                <>
+                  {isMobile && (
+                    <div
+                      className={imgContainerClass}
+                      style={{ margin: "1.5rem 0" }}
+                    >
+                      {carousel.hasCarousel ? (
+                        <Carousel
+                          isMediaSkinny={isMediaSkinny}
+                          slides={carousel.slides}
+                        />
+                      ) : (
+                        <img
+                          className="story-img"
+                          src={image.imgSrc}
+                          alt={image.imgAlt}
+                        />
+                      )}
+                      {!isMobile && image.hasImgBackground && (
+                        <div
+                          className={backgroundClass}
+                          style={{ backgroundColor: image.backgroundColor }}
+                        ></div>
+                      )}
+                    </div>
+                  )}
+                </>
+              )}
+            </React.Fragment>
+          ))}
+        </p>
+      )}
     </section>
   );
 };
