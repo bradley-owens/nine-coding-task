@@ -1,0 +1,413 @@
+@import "../../styles/main.scss";
+
+.story-container_row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  height: 800px;
+  padding: 5rem;
+  margin: 1.5rem 0;
+
+  @include breakpoint(desk-md) {
+    gap: 5rem;
+    padding: 2rem;
+    height: 600px;
+  }
+
+  @include breakpoint(mob-lg) {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    height: auto;
+    padding: 0;
+  }
+
+  @include breakpoint(mob-lg) {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    height: auto;
+    padding: 0;
+    // margin-top: 5rem;
+  }
+
+  @include breakpoint(mob-an) {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;
+  }
+}
+
+.story-container_row p {
+  width: 400px;
+  height: auto;
+  font-size: 16px;
+  margin: 1rem;
+
+  @include breakpoint(tablet) {
+    width: 400px;
+    height: 180px;
+    height: auto;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 1rem;
+  }
+
+  @include breakpoint(mob-lg) {
+    width: 90%;
+    font-size: 12px;
+    line-height: 20px;
+    height: unset;
+    margin: unset;
+  }
+
+  @include breakpoint(mob-md) {
+    font-size: 12px;
+  }
+}
+
+.img-container_row {
+  position: relative;
+  z-index: 0;
+  max-width: 100%;
+
+  @include breakpoint(mob-lg) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.img-container_row .story-img {
+  position: relative;
+  width: 820px;
+  height: 620px;
+  z-index: 10;
+
+  @include breakpoint(desk-md) {
+    width: 600px;
+    height: 500px;
+  }
+
+  @include breakpoint(tablet) {
+    width: 500px;
+    height: 400px;
+  }
+
+  @include breakpoint(mob-lg) {
+    position: relative;
+    width: 90%;
+    height: unset;
+    z-index: 10;
+  }
+}
+
+.img-container_row .img-background {
+  position: absolute;
+  top: -4rem;
+  left: -5rem;
+  z-index: 0;
+  background-color: #e8f2f1;
+  width: 820px;
+  height: 620px;
+
+  @include breakpoint(desk-md) {
+    width: 400px;
+    height: 500px;
+    top: -2rem;
+    left: -3rem;
+  }
+
+  @include breakpoint(tablet) {
+    width: 400px;
+    height: 400px;
+    top: -2rem;
+    left: -6rem;
+  }
+}
+
+// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////ROW - REVERSE //////////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.story-container_reverse {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  height: 800px;
+  padding: 5rem;
+  margin-top: 1.5rem;
+
+  @include breakpoint(desk-md) {
+    gap: 5rem;
+    padding: 2rem;
+    height: 500px;
+  }
+
+  @include breakpoint(mob-lg) {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    height: auto;
+    padding: 0;
+    // margin-top: 5rem;
+  }
+
+  @include breakpoint(mob-md) {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    height: auto;
+    padding: 0;
+    // margin-top: 2rem;
+  }
+
+  @include breakpoint(mob-an) {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    height: auto;
+    padding: 0;
+    // margin-top: 2rem;
+  }
+}
+
+.story-container_reverse p {
+  width: 400px;
+  // height: 180px;
+  // height: auto;
+  font-size: 16px;
+  // margin: 1rem;
+
+  @include breakpoint(tablet) {
+    width: 400px;
+    height: 180px;
+    height: auto;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 1rem;
+  }
+
+  @include breakpoint(mob-lg) {
+    width: 90%;
+    font-size: 12px;
+    line-height: 20px;
+    height: unset;
+    margin: unset;
+  }
+
+  @include breakpoint(mob-md) {
+    font-size: 12px;
+  }
+}
+
+.img-container_reverse {
+  position: relative;
+  z-index: 0;
+  max-width: 100%;
+  margin-top: 1.5rem;
+
+  @include breakpoint(mob-lg) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.img-container_reverse .story-img {
+  position: relative;
+  width: 820px;
+  height: 620px;
+  z-index: 10;
+
+  @include breakpoint(desk-md) {
+    width: 600px;
+    height: 500px;
+  }
+
+  @include breakpoint(tablet) {
+    width: 500px;
+    height: 400px;
+  }
+
+  @include breakpoint(mob-lg) {
+    position: relative;
+    width: 90%;
+    height: unset;
+    z-index: 10;
+  }
+}
+
+.img-container_reverse .img-background {
+  position: absolute;
+  top: -4rem;
+  right: -5rem;
+  z-index: 0;
+  background-color: #e8f2f1;
+  width: 820px;
+  height: 620px;
+
+  @include breakpoint(desk-md) {
+    width: 400px;
+    height: 500px;
+    top: -2rem;
+    right: -3rem;
+  }
+
+  @include breakpoint(tablet) {
+    width: 400px;
+    height: 400px;
+    top: -2rem;
+    right: -6rem;
+  }
+}
+
+// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////Skinny //////////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.img-container_row.skinny .story-img,
+.img-container_reverse.skinny .story-img {
+  width: 600px;
+  height: 700px;
+  z-index: 10;
+  @include breakpoint(desk-md) {
+    width: 500px;
+    height: 500px;
+  }
+
+  @include breakpoint(tablet) {
+    width: 400px;
+    height: 400px;
+  }
+
+  @include breakpoint(mob-lg) {
+    width: 100%;
+    margin: 0rem auto;
+    height: auto;
+  }
+}
+
+.img-container_row .img-background_skinny {
+  position: absolute;
+  top: -4rem;
+  left: -4rem;
+  z-index: 0;
+  background-color: #e8f2f1;
+  width: 650px;
+  height: 700px;
+
+  @include breakpoint(desk-md) {
+    width: 650px;
+    height: 700px;
+    top: -2rem;
+    left: -3rem;
+  }
+
+  @include breakpoint(tablet) {
+    width: 300px;
+    height: 700px;
+    top: -2rem;
+    left: -5rem;
+  }
+}
+
+.img-container_row .img-background_skinny_low {
+  position: absolute;
+  bottom: -4rem;
+  left: -4rem;
+  z-index: 0;
+  background-color: #e8f2f1;
+  width: 650px;
+  height: 700px;
+
+  @include breakpoint(desk-md) {
+    width: 500px;
+    height: 500px;
+    bottom: -2rem;
+    left: -3rem;
+  }
+
+  @include breakpoint(tablet) {
+    width: 400px;
+    height: 400px;
+    bottom: -2rem;
+    left: -5rem;
+  }
+}
+
+.img-container_reverse .img-background_skinny {
+  position: absolute;
+  top: -4rem;
+  right: -4rem;
+  z-index: 0;
+  background-color: #e8f2f1;
+  width: 650px;
+  height: 700px;
+
+  @include breakpoint(desk-md) {
+    width: 500px;
+    height: 500px;
+    top: -2rem;
+    right: -3rem;
+  }
+
+  @include breakpoint(tablet) {
+    width: 400px;
+    height: 400px;
+    top: -2rem;
+    right: -5rem;
+  }
+}
+
+.img-container_reverse .img-background_skinny_low {
+  position: absolute;
+  bottom: -4rem;
+  right: -4rem;
+  z-index: 0;
+  background-color: #e8f2f1;
+  width: 600px;
+  height: 700px;
+
+  @include breakpoint(desk-md) {
+    width: 500px;
+    height: 500px;
+    bottom: -2rem;
+    right: -3rem;
+  }
+
+  @include breakpoint(tablet) {
+    width: 400px;
+    height: 400px;
+    bottom: -2rem;
+    right: -5rem;
+  }
+}
+
+.element-fade {
+  opacity: 0;
+  &.in-view {
+    opacity: 1;
+  }
+  transition: opacity 0.3s;
+}

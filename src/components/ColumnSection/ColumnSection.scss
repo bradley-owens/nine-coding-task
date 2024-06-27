@@ -1,0 +1,105 @@
+@import "../../styles/main.scss";
+
+.acknowledge-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1240px;
+  height: 1000px;
+  margin: 5rem auto;
+
+  @include breakpoint(desk-sm) {
+    width: 100%;
+    height: auto;
+    margin: 3rem auto;
+  }
+
+  @include breakpoint(mob-lg) {
+    width: 100%;
+    height: auto;
+    margin: 3rem auto;
+  }
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 700px;
+  padding: 2rem 0;
+
+  @include breakpoint(mob-lg) {
+    width: 90%;
+  }
+}
+
+.text-container h1 {
+  font-size: 60px;
+  padding: 3rem 0;
+  font-weight: bold;
+
+  @include breakpoint(mob-lg) {
+    width: 90%;
+    line-height: 30px;
+    font-size: 30px;
+    padding: 1.5rem 0;
+  }
+}
+
+.text-container p {
+  line-height: 25px;
+
+  @include breakpoint(mob-lg) {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  align-items: center;
+
+  @include breakpoint(mob-lg) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.image-container img {
+  width: 400px;
+  height: 500px;
+
+  @include breakpoint(desk-sm) {
+    width: 200px;
+    height: 300px;
+  }
+
+  @include breakpoint(mob-lg) {
+    width: 350px;
+    height: 400px;
+  }
+
+  @include breakpoint(mob-md) {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+.image-single img {
+  width: 1200px;
+  height: 700px;
+
+  @include breakpoint(desk-md) {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+  }
+}

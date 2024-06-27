@@ -12,11 +12,10 @@ module.exports = {
   settings: { react: { version: "18.2" } },
   plugins: [
     "react-refresh",
-    "@typescript-eslint" // Add TypeScript plugin
+    "@typescript-eslint", // Add TypeScript plugin
   ],
   rules: {
     "react-refresh/only-export-components": "warn",
     // Add or override TypeScript-specific rules here
   },
 };
-

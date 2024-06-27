@@ -1,4 +1,4 @@
-@import 'mixin';
+@import "mixin";
 // Color system
 $white: #fff;
 $black: #000;
@@ -27,17 +27,14 @@ $col-spacing: 20px;
 // This is the default html and body font-size for the base rem value.
 $rem-base: 10px;
 
-
-
 $breakpoints: (
-	'zero': 0px,
-	'mobile-sm': 350px,
-	'mobile': 700px,
-	'tablet': 1000px,
-	'desk-sm': 1300px,
-	'desk-md': 1400px,
-	'desk-lg': 1600px,
-	'desk-xl': 2000px,
-	'desk-xxl': 2400px
+  "zero": 0px,
+  "mobile-sm": 350px,
+  "mobile": 700px,
+  "tablet": 1000px,
+  "desk-sm": 1300px,
+  "desk-md": 1400px,
+  "desk-lg": 1600px,
+  "desk-xl": 2000px,
+  "desk-xxl": 2400px,
 );
-

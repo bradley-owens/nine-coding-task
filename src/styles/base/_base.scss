@@ -32,18 +32,22 @@ html {
 body {
   @include font-opentype;
   @include font-smoothing;
-  font-family: 'ProximaNova', Arial, Helvetica, sans-serif;
+  font-family: "ProximaNova", Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
   font-weight: normal;
   line-height: 2em;
 }
 
 .prox-reg {
-  font-family: 'ProximaNova', Arial, Helvetica, sans-serif;
+  font-family: "ProximaNova", Arial, Helvetica, sans-serif;
   font-weight: normal;
 }
 
 article {
-  height: 100vh;
-  background-color: limegreen;
+  // height: 100vh;
+  max-width: 1800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

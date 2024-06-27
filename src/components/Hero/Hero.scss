@@ -1,0 +1,199 @@
+@import "../../styles/main.scss";
+
+.hero {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 955px;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+
+  @include breakpoint(desk-lg) {
+    height: 700px;
+  }
+
+  @include breakpoint(tablet) {
+    height: 500px;
+  }
+
+  @include breakpoint(mob-lg) {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    max-height: 1000px;
+    height: max-content;
+    width: 100%;
+    margin-top: 6rem;
+  }
+}
+
+.hero-img {
+  width: 50%;
+  height: 900px;
+  transition: transform 0.3s ease-out;
+
+  @include breakpoint(desk-lg) {
+    width: 50%;
+    height: 700px;
+  }
+
+  @include breakpoint(tablet) {
+    width: 50vw;
+    height: 500px;
+  }
+
+  @include breakpoint(mob-lg) {
+    width: 90%;
+    height: auto;
+  }
+
+  @include breakpoint(mob-md) {
+    width: 90%;
+    height: 290px;
+  }
+}
+
+.hero-content {
+  width: 50%;
+  padding: 0 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  @include breakpoint(desk-lg) {
+    width: 50%;
+    padding: 0 5rem;
+  }
+  @include breakpoint(tablet) {
+    width: 50vw;
+    padding: 0 4rem;
+  }
+
+  @include breakpoint(mob-lg) {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 5rem;
+  }
+}
+
+.collaboration-statement {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.collaboration-statement p {
+  margin-top: 20px;
+  @include breakpoint(tablet) {
+    margin-top: 10px;
+  }
+}
+
+.collaboration-statement img {
+  height: 47px;
+
+  @include breakpoint(tablet) {
+    height: 30px;
+  }
+}
+
+.hero-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+  width: 421px;
+
+  @include breakpoint(tablet) {
+    width: 300px;
+  }
+
+  @include breakpoint(mob-lg) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+  }
+}
+
+.hero-main h1 {
+  font-size: 80px;
+  line-height: 80px;
+  font-weight: bold;
+
+  @include breakpoint(desk-lg) {
+    font-size: 55px;
+    line-height: 55px;
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  @include breakpoint(mob-lg) {
+    width: 90%;
+    font-size: 38px;
+    line-height: 38px;
+  }
+
+  @include breakpoint(mob-md) {
+    width: 100%;
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+.hero-main p {
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: medium;
+  width: 380px;
+
+  @include breakpoint(tablet) {
+    width: 300px;
+    font-size: 14px;
+    line-height: 27px;
+  }
+
+  @include breakpoint(mob-lg) {
+    width: 80%;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @include breakpoint(mob-md) {
+    width: 100%;
+  }
+}
+
+.hero-main button {
+  background-color: #deecc0;
+  border-radius: 5px;
+  width: 160px;
+  height: 55px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.hero-main button:hover {
+  background-color: #deecc0;
+  border-radius: 5px;
+  width: 160px;
+  height: 55px;
+  font-size: 16px;
+  box-shadow: 0 8px 15px 2px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  transition: 0.3s;
+}

@@ -1,9 +1,9 @@
 interface Window {
-  videojs: any
+  videojs: any;
 }
 
 declare namespace JSX {
   interface IntrinsicElements {
-    'video-js': any
+    "video-js": any;
   }
 }

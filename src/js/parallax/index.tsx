@@ -1,10 +1,13 @@
-import { useEffect } from 'react'
-import LocomotiveScroll from 'locomotive-scroll'
-import { useMediaQuery } from 'react-responsive'
-import { LocomotiveScrollProps } from '../../types'
+import { useEffect } from "react";
+import LocomotiveScroll from "locomotive-scroll";
+// import { useMediaQuery } from "react-responsive";
+import { LocomotiveScrollProps } from "../../types";
 
-const LocomotiveParallax: React.FC<LocomotiveScrollProps> = ({ locoScrollRef, children }) => {
-  const divRef = locoScrollRef as React.RefObject<HTMLDivElement>
+const LocomotiveParallax: React.FC<LocomotiveScrollProps> = ({
+  locoScrollRef,
+  children,
+}) => {
+  const divRef = locoScrollRef as React.RefObject<HTMLDivElement>;
 
   // const mobile = useMediaQuery({ maxWidth: 1023 })
 
@@ -19,11 +22,11 @@ const LocomotiveParallax: React.FC<LocomotiveScrollProps> = ({ locoScrollRef, ch
         smooth: true,
         lerp: 0.07,
         multiplier: 0.7,
-      })
+      });
     }
-  }, [divRef])
+  }, [divRef]);
 
-  return <div ref={divRef}>{children}</div>
-}
+  return <div ref={divRef}>{children}</div>;
+};
 
-export default LocomotiveParallax
+export default LocomotiveParallax;
