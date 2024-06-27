@@ -8,7 +8,7 @@ import Testimonial from "./components/Testimonial/Testimonial";
 
 import storyOneImg from "./assets/images/desktop/storyOneImg.png";
 import storyTwoImg from "./assets/images/desktop/storyTwoImg.png";
-import storyThreeImg from "./assets/images/desktop/storyThreeImg.png";
+import storyThreeImg from "./assets/images/desktop/StoryThreeImg.png";
 import storyFourImg from "./assets/images/desktop/storyFourImg.png";
 import acknowledgeImgOne from "./assets/images/desktop/acknowledgeImg_one.png";
 import acknowledgeImgTwo from "./assets/images/desktop/acknowledgeImg_two.png";
