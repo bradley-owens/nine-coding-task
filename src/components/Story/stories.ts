@@ -1,6 +1,6 @@
 import storyOneImg from "../../assets/images/desktop/storyOneImg.png";
 import storyTwoImg from "../../assets/images/desktop/storyTwoImg.png";
-import storyThreeImg from "../../assets/images/desktop/story3Img.png.png";
+import storyThreeImg from "../../assets/images/desktop/story3Img.png";
 import storyFourImg from "../../assets/images/desktop/storyFourImg.png";
 
 import slides1 from "../../js/data/slider";
