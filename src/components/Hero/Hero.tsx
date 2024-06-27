@@ -14,25 +14,29 @@ const Hero = ({ isMobile }: HeroProps) => {
 
   useEffect(() => {
     const handleScroll = () => {
+      const scrollPosition = window.scrollY;
       if (heroImgRef.current) {
-        const scrollPosition = window.scrollY;
-        heroImgRef.current.style.transform = `translateY(-${
+        heroImgRef.current.style.transform = `translateX(-${
           scrollPosition + 30
         }px)`;
       }
       if (heroMainRef.current) {
-        const scrollPosition = window.scrollY;
-        heroMainRef.current.style.transform = `translateY(-${
+        heroMainRef.current.style.transform = `translateX(${
           scrollPosition + 30
         }px)`;
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    if (!isMobile) {
+      window.addEventListener("scroll", handleScroll);
+      window.addEventListener("resize", handleScroll);
+    }
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
     };
-  }, []);
+  }, [isMobile]);
 
   return (
     <header className={"hero"}>

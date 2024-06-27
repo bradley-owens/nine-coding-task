@@ -1,17 +1,20 @@
-import { useState } from "react";
+// import { useState } from "react";
 import "./VideoSection.scss";
-import videoSrc from "../../assets/video/sectionVideo.mp4";
+import videoSectionImg from "../../assets/images/desktop/videoSectionImg.png";
 
 const VideoSection = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
+  // const [isPlaying, setIsPlaying] = useState(false);
 
-  const handlePlay = () => {
-    setIsPlaying(true);
-  };
+  // const handlePlay = () => {
+  //   setIsPlaying(true);
+  // };
 
   return (
     <section className="video-section">
-      {!isPlaying ? (
+      <div className="video-container">
+        <img src={videoSectionImg} alt={"video placeholder"} />
+      </div>
+      {/* {!isPlaying ? (
         <div className="video-container">
           <video className="full-video" src={videoSrc} />
           <button className="play-button" onClick={handlePlay}>
@@ -26,7 +29,7 @@ const VideoSection = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
-      )}
+      )} */}
     </section>
   );
 };
