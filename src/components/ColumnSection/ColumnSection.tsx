@@ -20,8 +20,8 @@ const ColumnSection = ({ heading, text, images }: ColumnSectionProps) => {
       </main>
 
       <div className={oneImage ? "image-single" : "image-container"}>
-        {images.map((img) => {
-          return <img src={img.imgSrc} alt={img.imgAlt} />;
+        {images.map((img, index) => {
+          return <img key={index} src={img.imgSrc} alt={img.imgAlt} />;
         })}
       </div>
     </section>
